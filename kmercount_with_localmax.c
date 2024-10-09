@@ -16,7 +16,7 @@
 
 /* GLOBAL VARIABLES */
 char *version = "kmercount_with_localmax, version 0.5 Oct 9, 2024";
-char *usage = "\nUsage: ./kmercount_with_localmax [background filename] [signal filename] [read length (max 64)] [min_kmerlength] [max_kmerlength] [base frequency cutoff for selecting a longer kmer as local maxima (default 0.35)] [gaps counted? counts center gap only by default, 'a'=count all gaps, 'n'=count only ungapped kmers]\nReads must be on individual lines with bases in all caps";
+char *usage = "\nUsage: ./kmercount_with_localmax [background filename] [signal filename] [read length (max 64)] [min_kmerlength] [max_kmerlength] [minimum count cutoff for printing] [base frequency cutoff for selecting a longer kmer as local maxima (default 0.35)] [gaps counted? counts center gap only by default, 'a'=count all gaps, 'n'=count only ungapped kmers]\nReads must be on individual lines with bases in all caps";
 __uint128_t mask_ULL[42][42];   /* PRIMARY mask_ULL FOR EACH SEPARATE NUCLEOTIDE */
 __uint128_t lowmask_ULL[42];    /* LOW MASK FOR EACH KMER */
 __uint128_t highmask_ULL[42];   /* HIGH MASK FOR EACH KMER */
